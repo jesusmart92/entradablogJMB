@@ -1,17 +1,19 @@
 
 public class EntradaBlogJMB {
-	//separador es el ccarácter que separa ENTRADA DE del
-		//nombre del autor
+	
 		
 		public static char separador=':';
 		private int id;
 		private String texto;
 		private String autor;
 		
+		public EntradaBlogJMB(int i, String string, String string2) {
+			// TODO Auto-generated constructor stub
+		}
 		//Constructor de la clase. recibe el número de entrada, el nombre del autor
 		//de la entrada y el texto que contiene la entrada. Si el número de entrada
 		//es negativo, lanza una excepción.
-		public EntradaBlog(int id,String autor,String texto)throws IllegalArgumentException{
+		public void EntradaBlog(int id,String autor,String texto)throws IllegalArgumentException{
 			if(id<=0) throw new IllegalArgumentException("El id no puede ser negativo");
 			this.id=id;
 			this.autor=autor;
@@ -48,7 +50,7 @@ public class EntradaBlogJMB {
 		//No tiene porqué tener argumentos.
 		public static void main(String[] args) {
 	                //Modificar.
-			EntradaBlog+INICIALES e1=new EntradaBlog+INICIALES (-3,"ana","Últimas noticias, está disponible BixBy 2.0");
+			EntradaBlogJMB e1=new EntradaBlogJMB (-3,"ana","Últimas noticias, está disponible BixBy 2.0");
 			System.out.println(e1);
 		}
 
